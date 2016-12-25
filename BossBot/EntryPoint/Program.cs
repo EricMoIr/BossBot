@@ -17,6 +17,8 @@ namespace EntryPoint
             maps.Add(m);
             List<Boss> bosses = new List<Boss>();
             Boss b = new Boss() { Name = "abomination", RespawnTime = 2, SpawnMaps = maps, Type = "gimmick" };
+            Spawn s = new Spawn(m, DateTime.Now);
+            b.Spawns[1] = s;
             bosses.Add(b);
             XMLFileManager.WriteFile(".\\Files\\bosses.txt", bosses);
             //Map m = XMLFileManager.ReadFile<Map>(".\\Files\\maps.txt");

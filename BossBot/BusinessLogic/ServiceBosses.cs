@@ -77,7 +77,7 @@ namespace BusinessLogic
         }
         public DateTime GetSpawnTime(string bossName, int channel)
         {
-            return GetSpawn(bossName, channel).Item2;
+            return GetSpawn(bossName, channel).Time;
         }
 
         public Dictionary<Tuple<Boss, int>, Spawn> GetAllSpawns()

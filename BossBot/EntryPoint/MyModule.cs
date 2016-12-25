@@ -24,6 +24,7 @@ namespace EntryPoint
         private static readonly string SPAWNS_FORMAT = ".spawns";
         private static readonly string BOSSES_FORMAT = ".bosses";
         private static readonly string PROTIPS_FORMAT = ".protips";
+        private static readonly int DIFF_IN_HOURS_WITH_SERVER = 2;
         public void Install(ModuleManager manager)
         {
             manager.CreateCommands("", cgb =>
@@ -170,7 +171,7 @@ namespace EntryPoint
         private void AddBossReminder(CommandEventArgs e, string name, int channel = 1)
         {
             DateTime spawnTime = serviceBosses.GetSpawnTime(name, channel);
-            DateTime alarmTime = spawnTime - new TimeSpan(0, REMINDER_MINUTES, 0);
+            DateTime alarmTime = spawnTime + new TimeSpan(DIFF_IN_HOURS_WITH_SERVER, 0, 0) - new TimeSpan(0, REMINDER_MINUTES, 0);
             if (alarmTime.CompareTo(DateTime.Now) > 0)
             {
                 AlarmClock clock = new AlarmClock(alarmTime);
@@ -246,7 +247,7 @@ namespace EntryPoint
                     try
                     {
                         int channel = args.Length > 1 ? int.Parse(args[1]) : 1;
-                        Tuple<Map, DateTime> spawn = serviceBosses.GetSpawn(args[0], channel);
+                        Spawn spawn = serviceBosses.GetSpawn(args[0], channel);
                         await PrintSpawn(e, Tuple.Create(serviceBosses.GetBoss(args[0]), channel), spawn);
                     }
                     catch (ArgumentException ex)
@@ -265,9 +266,9 @@ namespace EntryPoint
             await PrintMessage(e, $"Git gud. The format is \"{format}\"");
         }
 
-        private static async Task PrintSpawn(CommandEventArgs e, Tuple<Boss, int> boss, Tuple<Map, DateTime> spawn)
+        private static async Task PrintSpawn(CommandEventArgs e, Tuple<Boss, int> boss, Spawn spawn)
         {
-            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Item1.ToString()} at {spawn.Item2.TimeOfDay.ToString()}");
+            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Map.ToString()} at {spawn.Time.TimeOfDay.ToString()}");
         }
 
         private static async Task PrintSpawns(Dictionary<Tuple<Boss, int>, Spawn> spawns, CommandEventArgs e)
