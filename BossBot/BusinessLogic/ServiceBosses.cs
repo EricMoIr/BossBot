@@ -38,15 +38,28 @@ namespace BusinessLogic
             return boss.SpawnMaps[index + 1];
         }
 
-        public void UpdateSpawn(string bossName, int channel, string timeString, string mapName)
+        public void UpdateSpawn(string bossName, DateTime time, int channel, string mapName)
         {
             Boss boss = GetBoss(bossName);
-            Map map = GetMapOfBoss(mapName, boss);
-            DateTime time = DateTime.ParseExact(timeString, "HH.mm", CultureInfo.InvariantCulture);
+            Map map = GetMapOfBoss(boss, mapName);
             boss.AddSpawnTime(time, map);
         }
 
-        private Map GetMapOfBoss(string mapName, Boss boss)
+        public void UpdateSpawn(string bossName, DateTime time, int channel)
+        {
+            Boss boss = GetBoss(bossName);
+            Map map = GetMapOfBoss(boss);
+            boss.AddSpawnTime(time, map);
+        }
+        private Map GetMapOfBoss(Boss boss)
+        {
+            if(boss.SpawnMaps.Count > 1)
+            {
+                throw new ArgumentException($"{boss.Name} spawns in more than one map. Specify the map");
+            }
+            return boss.SpawnMaps[0];
+        }
+        private Map GetMapOfBoss(Boss boss, string mapName)
         {
             Map map = new Map() { Name = mapName };
             int index = boss.FindIndexOfSpawn(map);

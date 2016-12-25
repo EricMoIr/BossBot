@@ -31,8 +31,8 @@ namespace EntryPoint
                 CreateCommandsCommand(cgb);
                 CreateProtipsCommand(cgb);
                 CreateKilledTwoParamCommand(cgb);
-                //CreateKilledThreeParamCommand(cgb);
-                //CreateKilledDefaultCommand(cgb);
+                CreateKilledThreeParamCommand(cgb);
+                CreateKilledDefaultCommand(cgb);
                 CreateSpawnCommand(cgb);
                 CreateClearCommand(cgb);
                 CreateSpawnsCommand(cgb);
@@ -88,7 +88,7 @@ namespace EntryPoint
                         AddBossReminder(e, name);
                         await PrintMessage(e, "Got it");
                     }
-                    catch(InvalidOperationException ex)
+                    catch (InvalidOperationException ex)
                     {
                         serviceBosses.ClearSpawn(name, 1);
                         await PrintMessage(e, ex.Message);
@@ -99,8 +99,45 @@ namespace EntryPoint
                     }
                 });
         }
+        private void CreateKilledThreeParamCommand(CommandGroupBuilder cgb)
+        {
+            cgb.CreateCommand("killed")
+                .Parameter("name")
+                .Parameter("time")
+                .Parameter("MapOrChannel")
+                .Do(async (e) =>
+                {
+                    string name = "";
+                    int channel = 1;
+                    try
+                    {
+                        name = e.Args[0];
+                        DateTime time = StringToTime(e.Args[1]);
+                        if (int.TryParse(e.Args[1], out channel))
+                        {
+                            serviceBosses.UpdateSpawn(name, time, channel);
+                        }
+                        else
+                        {
+                            string map = e.Args[1];
+                            serviceBosses.UpdateSpawn(name, time, channel, map);
+                        }
+                        AddBossReminder(e, name, channel);
+                        await PrintMessage(e, "Got it");
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        serviceBosses.ClearSpawn(name, channel);
+                        await PrintMessage(e, ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        await PrintMessage(e, ex.Message);
+                    }
+                });
+        }
 
-        private void CreateKilledCommand(CommandGroupBuilder cgb)
+        private void CreateKilledDefaultCommand(CommandGroupBuilder cgb)
         {
             cgb.CreateCommand("killed")
                 .Parameter("text", ParameterType.Unparsed)
@@ -109,8 +146,11 @@ namespace EntryPoint
                     string[] args = e.Args[0].Split(' ');
                     try
                     {
-                        serviceBosses.UpdateSpawn(args[0], int.Parse(args[1]), args[2], args[3]);
-                        AddBossReminder(e);
+                        string bossName = args[0];
+                        DateTime time = StringToTime(args[1]);
+                        int channel = int.Parse(args[2]);
+                        serviceBosses.UpdateSpawn(bossName, time, channel, args[3]);
+                        AddBossReminder(e, bossName, channel);
                         await PrintMessage(e, "Got it.");
                     }
                     catch (IndexOutOfRangeException)
@@ -127,43 +167,23 @@ namespace EntryPoint
                     }
                 });
         }
-        private void AddBossReminder(CommandEventArgs e, string name)
+        private void AddBossReminder(CommandEventArgs e, string name, int channel = 1)
         {
-            DateTime spawnTime = serviceBosses.GetSpawnTime(name, 1);
+            DateTime spawnTime = serviceBosses.GetSpawnTime(name, channel);
             DateTime alarmTime = spawnTime - new TimeSpan(0, REMINDER_MINUTES, 0);
             if (alarmTime.CompareTo(DateTime.Now) > 0)
             {
                 AlarmClock clock = new AlarmClock(alarmTime);
-                var spawn = serviceBosses.GetSpawn(name, 1);
+                var spawn = serviceBosses.GetSpawn(name, channel);
                 clock.Alarm += async (sender, ev)
                     => await PrintSpawn(e, 
-                    Tuple.Create(serviceBosses.GetBoss(name), 1), 
+                    Tuple.Create(serviceBosses.GetBoss(name), channel), 
                     spawn);
                 alarms.Add(clock);
             }
             else
             {
                 throw new InvalidOperationException("The time entered is invalid. The boss would have already spawned");
-            }
-        }
-
-        private async void AddBossReminder(CommandEventArgs e)
-        {
-            string[] args = e.Args[0].Split(' ');
-            DateTime spawnTime = serviceBosses.GetSpawnTime(args[0], int.Parse(args[1]));
-            DateTime alarmTime = spawnTime - new TimeSpan(0, REMINDER_MINUTES, 0);
-            if (alarmTime.CompareTo(DateTime.Now) > 0)
-            {
-                AlarmClock clock = new AlarmClock(alarmTime);
-                var spawn = serviceBosses.GetSpawn(args[0], int.Parse(args[1]));
-                clock.Alarm += async (sender, ev)
-                    => await PrintSpawn(e, Tuple.Create(serviceBosses.GetBoss(args[0]),
-                    int.Parse(args[1])), spawn);
-                alarms.Add(clock);
-            }
-            else
-            {
-                await PrintMessage(e, "The time entered is invalid. The boss would have already spawned");
             }
         }
 

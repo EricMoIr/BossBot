@@ -3,7 +3,7 @@
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
-      <Spawn />
+      <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
