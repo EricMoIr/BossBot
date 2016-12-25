@@ -22,33 +22,6 @@
     <Type>gimmick</Type>
     <RespawnTime>2</RespawnTime>
   </Boss>
-  
-  <Boss>
-    <Spawns>
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-    </Spawns>
-    <Name>violent cerberus</Name>
-    <SpawnMaps>
-      <Map>
-        <Name>royal mausoleum 4f</Name>
-      </Map>
-      <Map>
-        <Name>royal mausoleum 5f</Name>
-      </Map>
-    </SpawnMaps>
-    <Type>world</Type>
-    <RespawnTime>4</RespawnTime>
-  </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -71,7 +44,6 @@
     <Type>gimmick</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -94,7 +66,6 @@
     <Type>gimmick</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -120,7 +91,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -146,7 +116,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -178,30 +147,6 @@
     <Type>random</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
-  <Boss>
-    <Spawns>
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-    </Spawns>
-    <Name>dullahan</Name>
-    <SpawnMaps>
-      <Map>
-        <Name>roxona reconstruction agency east building</Name>
-      </Map>
-    </SpawnMaps>
-    <Type>gimmick</Type>
-    <RespawnTime>2</RespawnTime>
-  </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -227,7 +172,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -253,7 +197,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -282,7 +225,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -305,7 +247,6 @@
     <Type>gimmick</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -334,7 +275,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -369,8 +309,7 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
-    <Boss>
+  <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
@@ -404,7 +343,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -427,7 +365,6 @@
     <Type>gimmick</Type>
     <RespawnTime>2</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -450,7 +387,6 @@
     <Type>gimmick</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -488,7 +424,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -526,7 +461,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -552,7 +486,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -575,7 +508,6 @@
     <Type>gimmick</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -607,7 +539,6 @@
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -630,7 +561,6 @@
     <Type>gimmick</Type>
     <RespawnTime>4</RespawnTime>
   </Boss>
-  
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
@@ -654,6 +584,63 @@
       </Map>
       <Map>
         <Name>Novaha Institute</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn>
+        <Map>
+          <Name>roxona reconstruction agency east building</Name>
+        </Map>
+        <Time>2016-12-25T17:44:00</Time>
+      </Spawn>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>dullahan</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>roxona reconstruction agency east building</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>2</RespawnTime>
+  </Boss>
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn>
+        <Map>
+          <Name>royal mausoleum 5f</Name>
+        </Map>
+        <Time>2016-12-25T23:00:00</Time>
+      </Spawn>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>violent cerberus</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>royal mausoleum 4f</Name>
+      </Map>
+      <Map>
+        <Name>royal mausoleum 5f</Name>
       </Map>
     </SpawnMaps>
     <Type>world</Type>

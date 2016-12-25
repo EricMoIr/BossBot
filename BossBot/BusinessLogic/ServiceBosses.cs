@@ -42,6 +42,7 @@ namespace BusinessLogic
             Boss boss = GetBoss(bossName);
             Map map = GetMapOfBoss(boss, mapName);
             boss.AddSpawnTime(time, map);
+            bosses.Update(boss);
         }
 
         public void UpdateSpawn(string bossName, DateTime time, int channel)
@@ -49,6 +50,7 @@ namespace BusinessLogic
             Boss boss = GetBoss(bossName);
             Map map = GetMapOfBoss(boss);
             boss.AddSpawnTime(time, map);
+            bosses.Update(boss);
         }
         private Map GetMapOfBoss(Boss boss)
         {
@@ -109,6 +111,7 @@ namespace BusinessLogic
         {
             Boss boss = GetBoss(bossName);
             boss.ClearSpawn(channel);
+            bosses.Update(boss);
         }
         private IEnumerable<Tuple<U, T>> GetKeysEqual<U, T, K>(Dictionary<Tuple<U, T>, K> d, Tuple<U, T> tuple)
         {
@@ -132,7 +135,7 @@ namespace BusinessLogic
             Boss boss = GetBoss(bossName);
             if (boss == null)
             {
-                throw new ArgumentException("{bossName} doesn't exist");
+                throw new ArgumentException($"{boss.Name} doesn't exist");
             }
             if (boss.SpawnMaps.Count == 1)
             {
@@ -141,7 +144,7 @@ namespace BusinessLogic
             }
             else
             {
-                throw new ArgumentException("{bossName} has more than one spawn map. Specify where you killed it.");
+                throw new ArgumentException($"{boss.Name} has more than one spawn map. Specify where you killed it.");
             }
         }
     }

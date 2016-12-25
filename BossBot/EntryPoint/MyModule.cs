@@ -132,26 +132,35 @@ namespace EntryPoint
                 .Do(async (e) =>
                 {
                     string name = "";
+                    int defaultChannel = 1;
                     int channel = 1;
                     try
                     {
                         name = e.Args[0];
                         DateTime time = StringToTime(e.Args[1]);
-                        if (int.TryParse(e.Args[1], out channel))
+                        if (int.TryParse(e.Args[2], out channel))
                         {
                             serviceBosses.UpdateSpawn(name, time, channel);
+                            AddBossReminder(e, name, channel);
                         }
                         else
                         {
-                            string map = e.Args[1];
-                            serviceBosses.UpdateSpawn(name, time, channel, map);
+                            string map = e.Args[2];
+                            serviceBosses.UpdateSpawn(name, time, defaultChannel, map);
+                            AddBossReminder(e, name, defaultChannel);
                         }
-                        AddBossReminder(e, name, channel);
                         await PrintMessage(e, "Got it");
                     }
                     catch (InvalidOperationException ex)
                     {
-                        serviceBosses.ClearSpawn(name, channel);
+                        if(channel == 0)
+                        {
+                            serviceBosses.ClearSpawn(name, defaultChannel);
+                        }
+                        else
+                        {
+                            serviceBosses.ClearSpawn(name, channel);
+                        }
                         await PrintMessage(e, ex.Message);
                     }
                     catch (Exception ex)
@@ -200,9 +209,10 @@ namespace EntryPoint
                 AlarmClock clock = new AlarmClock(alarmTime);
                 var spawn = serviceBosses.GetSpawn(name, channel);
                 clock.Alarm += async (sender, ev)
-                    => await PrintSpawn(e, 
+                    => await PrintSpawnWithMention(e, 
                     Tuple.Create(serviceBosses.GetBoss(name), channel), 
-                    spawn);
+                    spawn,
+                    "@here");
                 alarms.Add(clock);
             }
             else
@@ -271,7 +281,7 @@ namespace EntryPoint
                     {
                         int channel = args.Length > 1 ? int.Parse(args[1]) : 1;
                         Spawn spawn = serviceBosses.GetSpawn(args[0], channel);
-                        await PrintSpawn(e, Tuple.Create(serviceBosses.GetBoss(args[0]), channel), spawn);
+                        await PrintSpawnWithMention(e, Tuple.Create(serviceBosses.GetBoss(args[0]), channel), spawn, "@here");
                     }
                     catch (ArgumentException ex)
                     {
@@ -291,11 +301,16 @@ namespace EntryPoint
 
         private static async Task PrintSpawn(CommandEventArgs e, Tuple<Boss, int> boss, Spawn spawn)
         {
-            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Map.ToString()} at {spawn.Time.TimeOfDay.ToString()}", "@here");
+            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Map.ToString()} at {spawn.Time.TimeOfDay.ToString()}");
+        }
+        private static async Task PrintSpawnWithMention(CommandEventArgs e, Tuple<Boss, int> boss, Spawn spawn, string mention)
+        {
+            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Map.ToString()} at {spawn.Time.TimeOfDay.ToString()}", mention);
         }
 
         private static async Task PrintSpawns(Dictionary<Tuple<Boss, int>, Spawn> spawns, CommandEventArgs e)
         {
+            await PrintMessage(e, "", "@here");
             foreach (KeyValuePair<Tuple<Boss, int>, Spawn> entry in spawns)
             {
                 await PrintSpawn(e, entry.Key, entry.Value);
