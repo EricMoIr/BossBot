@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BossBot
 {
+    [Serializable]
     public class Spawn : Tuple<Map, DateTime>
     {
         public Spawn() : base(new Map(), DateTime.Now)

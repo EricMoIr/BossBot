@@ -108,5 +108,23 @@ namespace BusinessLogic
                 d[tuple] = value;
             }
         }
+
+        public void UpdateSpawn(string bossName, DateTime time)
+        {
+            Boss boss = GetBoss(bossName);
+            if (boss == null)
+            {
+                throw new ArgumentException("{bossName} doesn't exist");
+            }
+            if (boss.SpawnMaps.Count == 1)
+            {
+                boss.AddSpawnTime(time, boss.SpawnMaps[0]);
+                bosses.Update(boss);
+            }
+            else
+            {
+                throw new ArgumentException("{bossName} has more than one spawn map. Specify where you killed it.");
+            }
+        }
     }
 }

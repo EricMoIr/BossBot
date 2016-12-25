@@ -8,7 +8,19 @@ using System.Threading.Tasks;
 namespace DataManager.XML.Models
 {
     [Serializable]
-    public class MapXML : Map
+    public class MapXML : Map, IModel<Map>
     {
+        public MapXML()
+        {
+
+        }
+
+        public Map Get()
+        {
+            return new Map()
+            {
+                Name = Name
+            };
+        }
     }
 }

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfBoss xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
     <Name>abomination</Name>
     <SpawnMaps>
       <Map>
@@ -10,31 +22,4 @@
     <Type>gimmick</Type>
     <RespawnTime>2</RespawnTime>
   </Boss>
-  
-  <Boss>
-    <Name>violent cerberus</Name>
-    <SpawnMaps>
-      <Map>
-        <Name>royal mausoleum 4f</Name>
-      </Map>
-	  
-	  <Map>
-        <Name>royal mausoleum 5f</Name>
-      </Map>
-    </SpawnMaps>
-    <Type>gimmick</Type>
-    <RespawnTime>4</RespawnTime>
-  </Boss>
-  
-  <Boss>
-    <Name>earth archon</Name>
-    <SpawnMaps>
-      <Map>
-        <Name>royal mausoleum storage</Name>
-      </Map>
-    </SpawnMaps>
-    <Type>gimmick</Type>
-    <RespawnTime>4</RespawnTime>
-  </Boss>
-  
 </ArrayOfBoss>

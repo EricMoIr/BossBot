@@ -42,8 +42,6 @@ C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\EntryPoint\bin\Debug
 C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\EntryPoint\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\EntryPoint\bin\Debug\RestSharp.xml
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\EntryPoint.exe.config
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\obj\Debug\EntryPoint.exe
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\obj\Debug\EntryPoint.pdb
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\EntryPoint.exe
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\EntryPoint.pdb
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\BusinessLogic.dll
@@ -52,9 +50,6 @@ C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\Domain.dll
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\BusinessLogic.pdb
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\DataManager.pdb
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\Domain.pdb
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\Nito.AsyncEx.xml
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\Nito.AsyncEx.Concurrent.xml
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\Nito.AsyncEx.Enlightenment.xml
-C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\bin\Debug\RestSharp.xml
 C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\obj\Debug\EntryPoint.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\obj\Debug\EntryPoint.exe
+C:\Users\Eric\Documents\BossBot\BossBot\EntryPoint\obj\Debug\EntryPoint.pdb

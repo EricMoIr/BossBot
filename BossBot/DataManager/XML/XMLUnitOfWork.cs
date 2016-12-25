@@ -8,7 +8,7 @@ namespace DataManager.XML
     public class XMLUnitOfWork : IUnitOfWork
     {
         private string BOSS_PATH = ConfigurationManager.AppSettings["bossesPath"];
-        private IRepository<Boss> bossRepository;
+        private XMLRepository<Boss> bossRepository;
 
         public XMLUnitOfWork()
         {

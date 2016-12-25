@@ -5,6 +5,7 @@ using Discord.Modules;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Threading.Tasks;
 
 namespace EntryPoint
@@ -19,7 +20,7 @@ namespace EntryPoint
         private static readonly string KILLED_FORMAT = ".killed bossName hh.mm channel map";
         private static readonly string KILLED_ONE_CH_FORMAT = ".killed bossName hh.mm map";
         private static readonly string KILLED_ONE_MAP_FORMAT = ".killed bossName hh.mm channel";
-        private static readonly string KILLED_ONE_CH_ONE_MAP_FORMAT = ".killed bossName";
+        private static readonly string KILLED_ONE_CH_ONE_MAP_FORMAT = ".killed bossName hh.mm";
         private static readonly string SPAWNS_FORMAT = ".spawns";
         private static readonly string PROTIPS_FORMAT = ".protips";
         public void Install(ModuleManager manager)
@@ -28,7 +29,9 @@ namespace EntryPoint
             {
                 CreateCommandsCommand(cgb);
                 CreateProtipsCommand(cgb);
-                CreateKilledCommand(cgb);
+                CreateKilledTwoParamCommand(cgb);
+                //CreateKilledThreeParamCommand(cgb);
+                //CreateKilledDefaultCommand(cgb);
                 CreateSpawnCommand(cgb);
                 CreateClearCommand(cgb);
                 CreateSpawnsCommand(cgb);
@@ -67,6 +70,33 @@ namespace EntryPoint
                     await PrintMessage(e, oneChOneMap);
                 });
         }
+        private void CreateKilledTwoParamCommand(CommandGroupBuilder cgb)
+        {
+            cgb.CreateCommand("killed")
+                .Parameter("name")
+                .Parameter("time")
+                .Do(async (e) =>
+                {
+                    string name = "";
+                    try
+                    {
+                        name = e.Args[0];
+                        DateTime time = StringToTime(e.Args[1]);
+                        serviceBosses.UpdateSpawn(name, time);
+                        AddBossReminder(e, name);
+                        await PrintMessage(e, "Got it");
+                    }
+                    catch(InvalidOperationException ex)
+                    {
+                        serviceBosses.ClearSpawn(name, 1);
+                        await PrintMessage(e, ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        await PrintMessage(e, ex.Message);
+                    }
+                });
+        }
 
         private void CreateKilledCommand(CommandGroupBuilder cgb)
         {
@@ -94,6 +124,25 @@ namespace EntryPoint
                         await PrintFormat(e, KILLED_FORMAT);
                     }
                 });
+        }
+        private void AddBossReminder(CommandEventArgs e, string name)
+        {
+            DateTime spawnTime = serviceBosses.GetSpawnTime(name, 1);
+            DateTime alarmTime = spawnTime - new TimeSpan(0, REMINDER_MINUTES, 0);
+            if (alarmTime.CompareTo(DateTime.Now) > 0)
+            {
+                AlarmClock clock = new AlarmClock(alarmTime);
+                var spawn = serviceBosses.GetSpawn(name, 1);
+                clock.Alarm += async (sender, ev)
+                    => await PrintSpawn(e, 
+                    Tuple.Create(serviceBosses.GetBoss(name), 1), 
+                    spawn);
+                alarms.Add(clock);
+            }
+            else
+            {
+                throw new InvalidOperationException("The time entered is invalid. The boss would have already spawned");
+            }
         }
 
         private async void AddBossReminder(CommandEventArgs e)
@@ -171,12 +220,11 @@ namespace EntryPoint
                 .Parameter("text", ParameterType.Unparsed)
                 .Do(async (e) =>
                 {
-                    Tuple<Map, DateTime> spawn = null;
                     string[] args = e.Args[0].Split(' ');
                     try
                     {
                         int channel = args.Length > 1 ? int.Parse(args[1]) : 1;
-                        spawn = serviceBosses.GetSpawn(args[0], channel);
+                        Tuple<Map, DateTime> spawn = serviceBosses.GetSpawn(args[0], channel);
                         await PrintSpawn(e, Tuple.Create(serviceBosses.GetBoss(args[0]), channel), spawn);
                     }
                     catch (ArgumentException ex)
@@ -211,6 +259,11 @@ namespace EntryPoint
         private static async Task PrintMessage(CommandEventArgs e, string message)
         {
             await e.Channel.SendMessage($"```{message}```");
+        }
+
+        private static DateTime StringToTime(string time)
+        {
+            return DateTime.ParseExact(time, "HH.mm", CultureInfo.InvariantCulture);
         }
     }
 }

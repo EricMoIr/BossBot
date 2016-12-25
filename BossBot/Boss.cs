@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace BossBot
 {
+    [Serializable]
     public class Boss
     {
         //la primera posicion me la estoy pasando por los huevos
-        public Spawn[] Spawns { get; }
+        public Spawn[] Spawns { get; set; }
 
         public string Name { get; set; }
         public List<Map> SpawnMaps { get; set; }

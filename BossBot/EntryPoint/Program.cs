@@ -12,15 +12,17 @@ namespace EntryPoint
     {
         static void Main(string[] args)
         {
-            //List<Map> maps = new List<Map>();
-            //Map m = new Map() { Name = "holi"};
-            //maps.Add(m);
-            //List<Boss> bosses = new List<Boss>();
-            //Boss b = new Boss() { Name = "asd", RespawnTime = 2, SpawnMaps = maps, Type = "gimmick" };
-            //bosses.Add(b);
-            //XMLFileManager.WriteFile(".\\Files\\bosses.txt", bosses);
+            List<Map> maps = new List<Map>();
+            Map m = new Map() { Name = "guards graveyard"};
+            maps.Add(m);
+            List<Boss> bosses = new List<Boss>();
+            Boss b = new Boss() { Name = "abomination", RespawnTime = 2, SpawnMaps = maps, Type = "gimmick" };
+            bosses.Add(b);
+            XMLFileManager.WriteFile(".\\Files\\bosses.txt", bosses);
             //Map m = XMLFileManager.ReadFile<Map>(".\\Files\\maps.txt");
+            //List<Boss> abosses = XMLFileManager.ReadFile<List<Boss>>(".\\Files\\bosses.txt");
             Start();
+            Console.Read();
         }
         public static void Start()
         {
