@@ -53,12 +53,18 @@ namespace BusinessLogic
         }
         private Map GetMapOfBoss(Boss boss)
         {
-            if(boss.SpawnMaps.Count > 1)
+            if (boss.SpawnMaps.Count > 1)
             {
                 throw new ArgumentException($"{boss.Name} spawns in more than one map. Specify the map");
             }
             return boss.SpawnMaps[0];
         }
+
+        public List<Boss> GetBosses()
+        {
+            return (List<Boss>)bosses.Get();
+        }
+
         private Map GetMapOfBoss(Boss boss, string mapName)
         {
             Map map = new Map() { Name = mapName };

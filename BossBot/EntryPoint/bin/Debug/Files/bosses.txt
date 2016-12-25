@@ -7,7 +7,7 @@
         <Map>
           <Name>guards graveyard</Name>
         </Map>
-        <Time>2016-12-25T12:18:00</Time>
+        <Time>2016-12-25T11:52:49.2094778-03:00</Time>
       </Spawn>
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />

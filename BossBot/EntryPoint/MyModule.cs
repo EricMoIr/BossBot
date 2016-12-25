@@ -31,13 +31,40 @@ namespace EntryPoint
             {
                 CreateCommandsCommand(cgb);
                 CreateProtipsCommand(cgb);
-                CreateKilledTwoParamCommand(cgb);
-                CreateKilledThreeParamCommand(cgb);
-                CreateKilledDefaultCommand(cgb);
+                CreateKilledCommand(cgb);
                 CreateSpawnCommand(cgb);
                 CreateClearCommand(cgb);
                 CreateSpawnsCommand(cgb);
+                CreateBossesCommand(cgb);
             });
+        }
+
+        private void CreateBossesCommand(CommandGroupBuilder cgb)
+        {
+            cgb.CreateCommand("bosses")
+                .Do(async (e) =>
+                {
+                    List<Boss> bosses = serviceBosses.GetBosses();
+                    if(bosses.Count == 0)
+                    {
+                        await PrintMessage(e, "I don't know any boss. Derp");
+                    }
+                    else
+                    {
+                        await PrintMessage(e, "These are the bosses I know:");
+                    }
+                    foreach (Boss boss in bosses)
+                    {
+                        await PrintMessage(e, boss.ToString());
+                    }
+                });
+        }
+
+        private void CreateKilledCommand(CommandGroupBuilder cgb)
+        {
+            CreateKilledTwoParamCommand(cgb);
+            CreateKilledThreeParamCommand(cgb);
+            CreateKilledDefaultCommand(cgb);
         }
 
         private void CreateCommandsCommand(CommandGroupBuilder cgb)
