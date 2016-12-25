@@ -1,0 +1,9 @@
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\bin\Release\BusinessLogic.dll
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\bin\Release\BusinessLogic.pdb
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\bin\Release\DataManager.dll
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\bin\Release\Domain.dll
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\bin\Release\DataManager.pdb
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\bin\Release\Domain.pdb
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\obj\Release\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\obj\Release\BusinessLogic.dll
+C:\Users\Eric\Documents\BossBot\BossBot\BusinessLogic\obj\Release\BusinessLogic.pdb

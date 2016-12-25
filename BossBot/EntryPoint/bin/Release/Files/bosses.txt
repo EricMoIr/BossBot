@@ -13,6 +13,28 @@
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
     </Spawns>
+    <Name>abomination</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>guards graveyard</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>2</RespawnTime>
+  </Boss>
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
     <Name>earth archon</Name>
     <SpawnMaps>
       <Map>
@@ -570,12 +592,7 @@
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
-      <Spawn>
-        <Map>
-          <Name>roxona reconstruction agency east building</Name>
-        </Map>
-        <Time>2016-12-25T17:44:00</Time>
-      </Spawn>
+      <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
@@ -623,32 +640,5 @@
     </SpawnMaps>
     <Type>world</Type>
     <RespawnTime>4</RespawnTime>
-  </Boss>
-  <Boss>
-    <Spawns>
-      <Spawn xsi:nil="true" />
-      <Spawn>
-        <Map>
-          <Name>guards graveyard</Name>
-        </Map>
-        <Time>2016-12-26T00:20:00</Time>
-      </Spawn>
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-      <Spawn xsi:nil="true" />
-    </Spawns>
-    <Name>abomination</Name>
-    <SpawnMaps>
-      <Map>
-        <Name>guards graveyard</Name>
-      </Map>
-    </SpawnMaps>
-    <Type>gimmick</Type>
-    <RespawnTime>2</RespawnTime>
   </Boss>
 </ArrayOfBoss>

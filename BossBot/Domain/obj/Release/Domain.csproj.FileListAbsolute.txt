@@ -1,0 +1,15 @@
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Domain.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Domain.pdb
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Newtonsoft.Json.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Nito.AsyncEx.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\RestSharp.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\WebSocket4Net.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Newtonsoft.Json.xml
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Nito.AsyncEx.xml
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\bin\Release\RestSharp.xml
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\obj\Release\Domain.dll
+C:\Users\Eric\Documents\BossBot\BossBot\Domain\obj\Release\Domain.pdb

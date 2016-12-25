@@ -1,0 +1,7 @@
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Release\DataManager.dll
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Release\DataManager.pdb
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Release\Domain.dll
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Release\Domain.pdb
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\obj\Release\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\obj\Release\DataManager.dll
+C:\Users\Eric\Documents\BossBot\BossBot\DataManager\obj\Release\DataManager.pdb
