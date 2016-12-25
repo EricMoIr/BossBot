@@ -53,10 +53,12 @@ namespace EntryPoint
                     {
                         await PrintMessage(e, "These are the bosses I know:");
                     }
+                    string message = "";
                     foreach (Boss boss in bosses)
                     {
-                        await PrintMessage(e, boss.ToString());
+                        message += boss.ToString() + "\n";
                     }
+                    await PrintMessage(e, message);
                 });
         }
 
@@ -72,19 +74,13 @@ namespace EntryPoint
             cgb.CreateCommand("commands")
                 .Do(async (e) =>
                 {
-                    //uglier way to print
-                    //string commands = SPAWN_FORMAT + "\n"
-                    //   + CLEAR_FORMAT + "\n"
-                    //   + KILLED_FORMAT + "\n"
-                    //   + SPAWNS_FORMAT + "\n"
-                    //   + PROTIPS_FORMAT;
-                    //await PrintMessage(e, commands);
-                    await PrintMessage(e, BOSSES_FORMAT);
-                    await PrintMessage(e, CLEAR_FORMAT);
-                    await PrintMessage(e, KILLED_FORMAT);
-                    await PrintMessage(e, PROTIPS_FORMAT);
-                    await PrintMessage(e, SPAWN_FORMAT);
-                    await PrintMessage(e, SPAWNS_FORMAT);
+                    string commands = BOSSES_FORMAT + "\n"
+                       + CLEAR_FORMAT + "\n"
+                       + KILLED_FORMAT + "\n"
+                       + PROTIPS_FORMAT + "\n"
+                       + SPAWN_FORMAT + "\n"
+                       + SPAWNS_FORMAT;
+                    await PrintMessage(e, commands);
                 });
         }
         private void CreateProtipsCommand(CommandGroupBuilder cgb)
@@ -295,7 +291,7 @@ namespace EntryPoint
 
         private static async Task PrintSpawn(CommandEventArgs e, Tuple<Boss, int> boss, Spawn spawn)
         {
-            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Map.ToString()} at {spawn.Time.TimeOfDay.ToString()}");
+            await PrintMessage(e, $"{boss.Item1.ToString()} will spawn in channel {boss.Item2} at {spawn.Map.ToString()} at {spawn.Time.TimeOfDay.ToString()}", "@here");
         }
 
         private static async Task PrintSpawns(Dictionary<Tuple<Boss, int>, Spawn> spawns, CommandEventArgs e)
@@ -305,7 +301,11 @@ namespace EntryPoint
                 await PrintSpawn(e, entry.Key, entry.Value);
             }
         }
-
+        private static async Task PrintMessage(CommandEventArgs e, string message, string mention)
+        {
+            await e.Channel.SendMessage(mention);
+            await PrintMessage(e, message);
+        }
         private static async Task PrintMessage(CommandEventArgs e, string message)
         {
             await e.Channel.SendMessage($"```{message}```");
