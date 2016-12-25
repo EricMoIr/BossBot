@@ -3,7 +3,6 @@ using DataManager;
 using DataManager.XML;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 
 namespace BusinessLogic

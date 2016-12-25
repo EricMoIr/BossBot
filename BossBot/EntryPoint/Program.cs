@@ -2,9 +2,6 @@
 using Discord;
 using Discord.Commands;
 using Discord.Modules;
-using DataManager.XML;
-using BossBot;
-using System.Collections.Generic;
 
 namespace EntryPoint
 {

@@ -1,10 +1,3 @@
-C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\DataManager\bin\Debug\DataManager.dll
-C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\DataManager\bin\Debug\DataManager.pdb
-C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
-C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\DataManager\obj\Debug\DataManager.dll
-C:\Users\Eric\documents\visual studio 2015\Projects\BossBot\DataManager\obj\Debug\DataManager.pdb
-C:\Users\Eric\Documents\Visual Studio 2015\Projects\BossBot\DataManager\bin\Debug\Domain.dll
-C:\Users\Eric\Documents\Visual Studio 2015\Projects\BossBot\DataManager\bin\Debug\Domain.pdb
 C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Debug\DataManager.dll
 C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Debug\DataManager.pdb
 C:\Users\Eric\Documents\BossBot\BossBot\DataManager\bin\Debug\Domain.dll

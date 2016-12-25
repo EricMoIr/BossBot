@@ -1,5 +1,4 @@
 ﻿using BossBot;
-using DataManager.XML.Models;
 using System;
 using System.Configuration;
 

@@ -46,15 +46,12 @@
     <Compile Include="IRepositoryGets.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XML\Models\BossXML.cs" />
-    <Compile Include="XML\Models\IModel.cs" />
-    <Compile Include="XML\Models\MapXML.cs" />
     <Compile Include="XML\XMLRepository.cs" />
     <Compile Include="XML\XMLUnitOfWork.cs" />
     <Compile Include="XML\XMLFileManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain.csproj">
+    <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{22DC767D-4D97-4553-A4ED-8D736B2C8CAB}</Project>
       <Name>Domain</Name>
     </ProjectReference>

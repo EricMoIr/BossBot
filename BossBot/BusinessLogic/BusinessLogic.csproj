@@ -48,7 +48,7 @@
       <Project>{7D5C1553-46FC-41CF-ADB1-04B3D27A6E07}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain.csproj">
+    <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{22DC767D-4D97-4553-A4ED-8D736B2C8CAB}</Project>
       <Name>Domain</Name>
     </ProjectReference>

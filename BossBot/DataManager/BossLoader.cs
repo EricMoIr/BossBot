@@ -42,7 +42,7 @@ namespace DataManager
                     Boss boss = null;
                     if (type == "gimmick")
                     {
-                        boss = new GimmickBoss()
+                        boss = new Boss()//GimmickBoss()
                         {
                             Name = bossName,
                             RespawnTime = respawnTime,
