@@ -310,7 +310,10 @@ namespace EntryPoint
 
         private static async Task PrintSpawns(Dictionary<Tuple<Boss, int>, Spawn> spawns, CommandEventArgs e)
         {
-            await PrintMessage(e, "", "@here");
+            if(spawns.Count == 0)
+            {
+                await PrintMessage(e, "There's no spawns recorded");
+            }
             foreach (KeyValuePair<Tuple<Boss, int>, Spawn> entry in spawns)
             {
                 await PrintSpawn(e, entry.Key, entry.Value);
@@ -328,7 +331,7 @@ namespace EntryPoint
 
         private static DateTime StringToTime(string time)
         {
-            return DateTime.ParseExact(time, "HH.mm", CultureInfo.InvariantCulture);
+            return DateTime.ParseExact(time, "HH:mm", CultureInfo.InvariantCulture);
         }
     }
 }
