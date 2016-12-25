@@ -22,6 +22,7 @@ namespace EntryPoint
         private static readonly string KILLED_ONE_MAP_FORMAT = ".killed bossName hh.mm channel";
         private static readonly string KILLED_ONE_CH_ONE_MAP_FORMAT = ".killed bossName hh.mm";
         private static readonly string SPAWNS_FORMAT = ".spawns";
+        private static readonly string BOSSES_FORMAT = ".bosses";
         private static readonly string PROTIPS_FORMAT = ".protips";
         public void Install(ModuleManager manager)
         {
@@ -50,6 +51,7 @@ namespace EntryPoint
                     //   + SPAWNS_FORMAT + "\n"
                     //   + PROTIPS_FORMAT;
                     //await PrintMessage(e, commands);
+                    await PrintMessage(e, BOSSES_FORMAT);
                     await PrintMessage(e, CLEAR_FORMAT);
                     await PrintMessage(e, KILLED_FORMAT);
                     await PrintMessage(e, PROTIPS_FORMAT);
