@@ -11,7 +11,6 @@ namespace BossBot
     {
         //la primera posicion me la estoy pasando por los huevos
         public Spawn[] Spawns { get; set; }
-
         public string Name { get; set; }
         public List<Map> SpawnMaps { get; set; }
         public string Type { get; set; }

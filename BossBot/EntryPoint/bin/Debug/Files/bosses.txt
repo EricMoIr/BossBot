@@ -3,12 +3,7 @@
   <Boss>
     <Spawns>
       <Spawn xsi:nil="true" />
-      <Spawn>
-        <Map>
-          <Name>guards graveyard</Name>
-        </Map>
-        <Time>2016-12-25T11:52:49.2094778-03:00</Time>
-      </Spawn>
+      <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
       <Spawn xsi:nil="true" />
@@ -26,5 +21,642 @@
     </SpawnMaps>
     <Type>gimmick</Type>
     <RespawnTime>2</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>violent cerberus</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>royal mausoleum 4f</Name>
+      </Map>
+      <Map>
+        <Name>royal mausoleum 5f</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>earth archon</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>royal mausoleum storage</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>earth canceril</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>royal mausoleum constructor's chapel</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>bleak chapparition</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>tenet chapel b1</Name>
+      </Map>
+      <Map>
+        <Name>tenet chapel 1f</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>blasphemous deathweaver</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>crystal mine 2f</Name>
+      </Map>
+      <Map>
+        <Name>crystal mine 3f</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>obscene deathweaver</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>ashaq underground prison 1f</Name>
+      </Map>
+      <Map>
+        <Name>ashaq underground prison 2f</Name>
+      </Map>
+      <Map>
+        <Name>ashaq underground prison 3f</Name>
+      </Map>
+      <Map>
+        <Name>crystal mine 3f</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>random</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>dullahan</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>roxona reconstruction agency east building</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>2</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>starving ellaganos</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>mokusul chamber</Name>
+      </Map>
+      <Map>
+        <Name>videntis shrine</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>burning fire lord</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>main chamber</Name>
+      </Map>
+      <Map>
+        <Name>sanctuary</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>forest keeper ferret marauder</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>bellai rainforest</Name>
+      </Map>
+      <Map>
+        <Name>zeraha</Name>
+      </Map>
+      <Map>
+        <Name>seir rainforest</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>glackuman</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>2nd demon prison</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>wrathful harpeia</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Demon Prison District 2 1F</Name>
+      </Map>
+      <Map>
+        <Name>Demon Prison District 2 2F</Name>
+      </Map>
+      <Map>
+        <Name>Demon Prison District 2 5F</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Helgasercle</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Kalejimas Visiting Room</Name>
+      </Map>
+      <Map>
+        <Name>Storage</Name>
+      </Map>
+      <Map>
+        <Name>Solitary Cells</Name>
+      </Map>
+      <Map>
+        <Name>Workshop</Name>
+      </Map>
+      <Map>
+        <Name>Investigation Room</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+    <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Mirtis</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Kalejimas Visiting Room</Name>
+      </Map>
+      <Map>
+        <Name>Storage</Name>
+      </Map>
+      <Map>
+        <Name>Solitary Cells</Name>
+      </Map>
+      <Map>
+        <Name>Workshop</Name>
+      </Map>
+      <Map>
+        <Name>Investigation Room</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Kubas</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Crystal Mine Lot 2 2F</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>2</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Marionette</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Roxona Reconstruction Agency West Building</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Marnox</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Thaumas Trail</Name>
+      </Map>
+      <Map>
+        <Name>Salvia Forest</Name>
+      </Map>
+      <Map>
+        <Name>Sekta Forest</Name>
+      </Map>
+      <Map>
+        <Name>Rasvoy Lake</Name>
+      </Map>
+      <Map>
+        <Name>Oasseu Memorial</Name>
+      </Map>
+      <Map>
+        <Name>Maven Abby</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Rexipher</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Thaumas Trail</Name>
+      </Map>
+      <Map>
+        <Name>Salvia Forest</Name>
+      </Map>
+      <Map>
+        <Name>Sekta Forest</Name>
+      </Map>
+      <Map>
+        <Name>Rasvoy Lake</Name>
+      </Map>
+      <Map>
+        <Name>Oasseu Memorial</Name>
+      </Map>
+      <Map>
+        <Name>Maven Abby</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Mineloader</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Mage Tower 4F</Name>
+      </Map>
+      <Map>
+        <Name>Mage Tower 5F</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Necroventer</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Residence of the Fallen Legwyn Family</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Prison Manager Prison Cutter</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Sentry Bailey</Name>
+      </Map>
+      <Map>
+        <Name>Resident Quarter</Name>
+      </Map>
+      <Map>
+        <Name>Storage Quarter</Name>
+      </Map>
+      <Map>
+        <Name>Fortress Battlegrounds</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>Templeshooter</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Royal Constructors' Chapel</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>gimmick</Type>
+    <RespawnTime>4</RespawnTime>
+  </Boss>
+  
+  <Boss>
+    <Spawns>
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+      <Spawn xsi:nil="true" />
+    </Spawns>
+    <Name>hungry Velnia Monkey</Name>
+    <SpawnMaps>
+      <Map>
+        <Name>Novaha Assembly Hall</Name>
+      </Map>
+      <Map>
+        <Name>Novaha Annex</Name>
+      </Map>
+      <Map>
+        <Name>Novaha Institute</Name>
+      </Map>
+    </SpawnMaps>
+    <Type>world</Type>
+    <RespawnTime>4</RespawnTime>
   </Boss>
 </ArrayOfBoss>
