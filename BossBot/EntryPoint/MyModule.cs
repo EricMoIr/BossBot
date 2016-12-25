@@ -16,7 +16,10 @@ namespace EntryPoint
         private static int REMINDER_MINUTES = int.Parse(ConfigurationManager.AppSettings["reminderTime"]);
         private static readonly string SPAWN_FORMAT = ".spawn bossName channel";
         private static readonly string CLEAR_FORMAT = ".clear bossName channel";
-        private static readonly string KILLED_FORMAT = ".killed bossName channel hh.mm map";
+        private static readonly string KILLED_FORMAT = ".killed bossName hh.mm channel map";
+        private static readonly string KILLED_ONE_CH_FORMAT = ".killed bossName hh.mm map";
+        private static readonly string KILLED_ONE_MAP_FORMAT = ".killed bossName hh.mm channel";
+        private static readonly string KILLED_ONE_CH_ONE_MAP_FORMAT = ".killed bossName";
         private static readonly string SPAWNS_FORMAT = ".spawns";
         private static readonly string PROTIPS_FORMAT = ".protips";
         public void Install(ModuleManager manager)
@@ -24,6 +27,7 @@ namespace EntryPoint
             manager.CreateCommands("", cgb =>
             {
                 CreateCommandsCommand(cgb);
+                CreateProtipsCommand(cgb);
                 CreateKilledCommand(cgb);
                 CreateSpawnCommand(cgb);
                 CreateClearCommand(cgb);
@@ -48,6 +52,19 @@ namespace EntryPoint
                     await PrintMessage(e, PROTIPS_FORMAT);
                     await PrintMessage(e, SPAWN_FORMAT);
                     await PrintMessage(e, SPAWNS_FORMAT);
+                });
+        }
+        private void CreateProtipsCommand(CommandGroupBuilder cgb)
+        {
+            cgb.CreateCommand("protips")
+                .Do(async (e) =>
+                {
+                    string oneCh = "If the boss only spawns in one channel, you can use\n" + KILLED_ONE_CH_FORMAT;
+                    await PrintMessage(e, oneCh);
+                    string oneMap = "If the boss only spawns in one map, you can use\n" + KILLED_ONE_MAP_FORMAT;
+                    await PrintMessage(e, oneMap);
+                    string oneChOneMap = "If the boss only spawns in one channel and one map, you can use\n" + KILLED_ONE_CH_ONE_MAP_FORMAT;
+                    await PrintMessage(e, oneChOneMap);
                 });
         }
 
